@@ -11,8 +11,8 @@ public sealed interface Result<T> {
     
     default <U> Result<U> flatMap(Function<? super T, Result<U>> next) {
         return switch (this) {
-            case Success<T> s -> next.apply(s.value());
-            case Failure<T> f -> new Failure<>(f.error());
+            case Success<T>(var value) -> next.apply(value);
+            case Failure<T>(var error) -> Result.failure(error);
         };
     }
 }
