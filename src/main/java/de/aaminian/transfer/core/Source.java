@@ -1,4 +1,4 @@
-package core;
+package de.aaminian.transfer.core;
 
 import java.util.Iterator;
 

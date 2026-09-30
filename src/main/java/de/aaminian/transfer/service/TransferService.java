@@ -1,8 +1,8 @@
-package service;
+package de.aaminian.transfer.service;
 
-import core.Result;
-import core.Transfer;
-import core.TransferError;
+import de.aaminian.transfer.core.Result;
+import de.aaminian.transfer.core.Transfer;
+import de.aaminian.transfer.core.TransferError;
 
 import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
@@ -18,12 +18,12 @@ public final class TransferService implements AutoCloseable {
     private final ExecutorService executor;
     private final boolean ownsExecutor;
     
-    /** Creates a service that runs async transfers on virtual threads. */
+    /** Creates a de.aaminian.transfer.service that runs async transfers on virtual threads. */
     public TransferService() {
         this(Executors.newVirtualThreadPerTaskExecutor(), true);
     }
     
-    /** Creates a service using a caller-managed executor (not closed by this service). */
+    /** Creates a de.aaminian.transfer.service using a caller-managed executor (not closed by this de.aaminian.transfer.service). */
     public TransferService(ExecutorService executor) {
         this(executor, false);
     }

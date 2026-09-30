@@ -1,7 +1,7 @@
-package connector;
+package de.aaminian.transfer.connector;
 
-import core.Result;
-import core.Target;
+import de.aaminian.transfer.core.Result;
+import de.aaminian.transfer.core.Target;
 
 import java.io.PrintStream;
 import java.util.Iterator;
@@ -11,6 +11,7 @@ import java.util.Objects;
  * Prints every element on its own line. Accepts any element type.
  * Thread-safe: each line is written atomically; lines from concurrent transfers may interleave.
  */
+@SuppressWarnings("java:S106") // Console output is the purpose of this demo, not logging
 public final class ConsoleTarget implements Target<Object> {
     
     private final PrintStream out;

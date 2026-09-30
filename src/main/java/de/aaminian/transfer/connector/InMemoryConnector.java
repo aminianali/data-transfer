@@ -1,8 +1,8 @@
-package connector;
+package de.aaminian.transfer.connector;
 
-import core.Result;
-import core.Source;
-import core.Target;
+import de.aaminian.transfer.core.Result;
+import de.aaminian.transfer.core.Source;
+import de.aaminian.transfer.core.Target;
 
 import java.util.Collection;
 import java.util.Iterator;
