@@ -5,4 +5,5 @@ public sealed interface TransferError {
     
     record ReadFailed(String message) implements TransferError {}
     record WriteFailed(String message) implements TransferError {}
+    record UnexpectedFailure(String message, Throwable cause) implements TransferError {}
 }
